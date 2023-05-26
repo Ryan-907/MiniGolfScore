@@ -11,6 +11,8 @@ class Player(MiniGolf.MiniGolf):
     #Printout
     def __str__(self):
         return f'{self.name} has a score of {self.score}'
+    def __repr__(self):
+        return f'Player({self.name})'
         
     #Updatescore of player
     def update_par(self, par):

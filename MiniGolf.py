@@ -7,23 +7,26 @@ class MiniGolf:
         self.players = []
     
     def print_scorecard(self, players):
-        for hole in range(self.num_holes):
+        print("------------", end = '')
+        for hole in range(8):
             print("--------", end = '')
         print()
-        print(self.course_name, end = ' ')
+        print(f'{self.course_name:<10}', end = ' ')
         for hole in range(self.num_holes):
-            print("| " + str(hole + 1) + " ", end = ' ')
-        print("| Total |")
-        for hole in range(self.num_holes):
+            print(f"|{hole + 1:>2}", end = '')
+        print(f'{"| Total |":>9}')
+        print("------------", end = '')
+        for hole in range(8):
             print("--------", end = '')
         print()
 
         for player in range(len(players)):
-            print(players[player].name, end =" ")
+            print(f'{players[player].name:<10}', end = ' ')
             for hole in range(len(players[player].list_of_scores)):
-                print("| " + str(players[player].list_of_scores[hole]) + " ", end = ' ')
-            print("| " + str(sum(players[player].list_of_scores)) + " |" )
-            for hole in range(self.num_holes):
+                print(f"|{players[player].list_of_scores[hole]:>2}", end = '')
+            print(f"|{sum(players[player].list_of_scores):^7}|" )
+            print("------------", end = '')
+            for hole in range(8):
                 print("--------", end = '')
             print()
 

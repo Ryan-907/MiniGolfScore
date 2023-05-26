@@ -5,7 +5,7 @@ import Player
 if __name__ == "__main__":
     #Getting inputs for course
     crs_name = input("Enter the course name: ")
-    nm_holes = pyip.inputInt("Enter number of holes: ", min = 1)
+    nm_holes = pyip.inputInt("Enter number of holes: ", min = 1, max = 18)
     nm_players = pyip.inputInt("Enter number of plyers: ", min = 1)
     #Creating course with inputs
     course = MiniGolf.MiniGolf(crs_name, nm_holes, nm_players)
